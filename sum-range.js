@@ -1,9 +1,20 @@
 function range(start, end, step = 1) {
-  // Add code.
+let array = [];
+
+if(step>0){
+  for(let v = start; v<=end;step)arr.push(v);
+}else{
+  for(let v = start; v >= end; i += step)arr.push(v);
+}
+return arr;
 }
 
 function sum(numbers) {
-  // Add code.
+  let total = 0;
+  for (let value of numbers){
+    total += value;
+  }
+  return total;
 }
 
 

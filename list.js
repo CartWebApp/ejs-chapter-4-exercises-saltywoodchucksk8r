@@ -1,9 +1,18 @@
 function arrayToList(arr) {
   // Add code.
+  let list = null;
+  for(let arr = array.length -1; arr>=0; arr--){
+    list = {value: arr[arr], rest: list};
+  }
+  return list;
 }
 
 function listToArray(list, arr) {
-  // Add code.
+
+if (!list)return undefined;
+else if (arr == 0)return list.value;
+else return nth(list.rest, arr - 1); 
+
 }
 
 // tests

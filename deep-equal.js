@@ -1,7 +1,19 @@
 function deepEqual(value, reference) {
-  // Add code.
-}
+if(value === reference) return true;
 
+if(value == null || typeof value != "object" || 
+  refrence == null || typeof refrence != "object" return false);
+
+let keysValue = Object.keys(value), keysRefrence = Object.keys(refrence);
+
+if (keysValue.length != keysRefrence.length) return false;
+
+for (let key of keysValue){
+  if(!keysRefrence.includes(key)|| !deepEqual(value[key], refrence[key])) return false;
+
+}
+return true;
+}
 
 
 
